@@ -1,0 +1,21 @@
+
+// Fonts
+@import url(https://fonts.googleapis.com/css?family=Raleway:300,400,600);
+
+// Variables
+@import "variables";
+
+// Bootstrap
+@import "node_modules/bootstrap-sass/assets/stylesheets/bootstrap";
+
+// Adminex
+$url-img: '../../images/';
+
+@import "themes/bts-reset",
+        "themes/table-responsive",
+        "themes/adminex",
+        "themes/adminex-custom",
+        "themes/adminex-responsive";
+
+@import "core/app",
+        "core/grid";
