@@ -6,7 +6,7 @@
 
   <header class="form-signin-heading text-center">
     <h1 class="sign-title">Entre agora</h1>
-    <img src="{{ asset('images/login-logo.png' )}}" alt=""/>
+    <img src="{{ asset('images/logo.png' )}}" alt=""/>
   </header>
 
   <div class="login-wrap">

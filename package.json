@@ -22,6 +22,7 @@
     "i": "^0.3.5",
     "jquery-mask-plugin": "^1.14.10",
     "jquery.nicescroll": "^3.6.8",
+    "karl456-laravel-elixir-livereload": "^2.0.0",
     "npm": "^4.6.1"
   }
 }
