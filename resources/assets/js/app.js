@@ -6,7 +6,11 @@
  */
 
 require('./bootstrap');
-
+import $ from 'jquery';
+window.$ = window.jQuery = $;
+require ('jquery-ui/ui/widgets/sortable.js');
+require('jquery.nicescroll');
+require('jquery-mask-plugin');
 
 window.Vue = require('vue');
 

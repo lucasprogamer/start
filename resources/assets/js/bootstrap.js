@@ -9,10 +9,7 @@ window._ = require('lodash');
 
 try {
     window.$ = window.jQuery = require('jquery');
-
     require('bootstrap-sass');
-    require('jquery.nicescroll');
-    require('jquery-mask-plugin');
 } catch (e) {}
 
 /**
