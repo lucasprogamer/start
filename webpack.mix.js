@@ -22,11 +22,4 @@ mix.js([
    .copyDirectory('resources/assets/images', 'public/images');
 
 
-
-   mix.webpackConfig({
-       plugins: [
-           new LiveReloadPlugin()
-       ]
-   });
-
 mix.browserSync('start.app');

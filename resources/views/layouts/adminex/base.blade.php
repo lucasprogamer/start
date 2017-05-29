@@ -21,7 +21,10 @@
       <section>
 
         @include('partials.left-nav')
-        @yield('content')
+        @include('partials.header')
+
+
+          @yield('content')
 
 
       </section>
