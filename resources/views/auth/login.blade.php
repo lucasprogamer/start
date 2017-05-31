@@ -21,21 +21,11 @@
       </div>
     @endif
 
-    {!! Form::email('email', $value = old('email'), $attributes = [
-        'placeholder' => 'E-mail',
-        'class' => 'form-control' ,
-        'autofocus'
-      ]) !!}
+    {!! Form::email('email', old('email'), ['placeholder' => 'email@exemplo.com','class' => 'form-control' ,'autofocus', 'required' ]) !!}
 
-    {!! Form::password('password', $attributes = [
-        'placeholder' => 'Senha',
-        'class' => 'form-control'
-      ]) !!}
+    {!! Form::password('password', ['placeholder' => '*****','class' => 'form-control' ]) !!}
 
-    {{ Form::button('<i class="fa fa-check"></i>', [
-      'class'=>'btn btn-lg btn-login btn-block',
-      'type'=>'submit'
-      ]) }}
+    {{ Form::button('<i class="fa fa-check"></i>', [ 'class'=>'btn btn-lg btn-login btn-block','type'=>'submit' ]) }}
 
     <div class="registration">
       Ainda não é membro?
@@ -50,11 +40,14 @@
       </span>
 
       <span class="pull-right">
-        <a class="btn btn-link" href="{{ url('password/reset') }}">Esqueceu a senha?</a>
+        <a data-toggle="modal"  class="btn btn-link" href="#reset-password">Esqueceu a senha?</a>
       </span>
     </label>
 
   </div>
 
   {!! Form::close() !!}
+
+  @include('modals.reset-password')
+
 @endsection
