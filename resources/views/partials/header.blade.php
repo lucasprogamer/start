@@ -1,24 +1,18 @@
 
-      <!-- header section start-->
+
       <div class="header-section">
 
-          <!--toggle button start-->
+
           <a class="toggle-btn"><i class="fa fa-bars"></i></a>
-          <!--toggle button end-->
 
-          <!--search start-->
-          <form class="searchform" action="index.html" method="post">
-              <input type="text" class="form-control" name="keyword" placeholder="Search here..." />
-          </form>
-          <!--search end-->
 
-          <!--notification menu start -->
+
           <div class="menu-right">
               <ul class="notification-menu">
                   <li>
                       <a href="#" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
                           <img src="#" alt="" /> <?php // TODO: add this image ?>
-                          John Doe
+                          {{ Auth::user()->name }}
                           <span class="caret"></span>
                       </a>
                       <ul class="dropdown-menu dropdown-menu-usermenu pull-right">
@@ -30,7 +24,6 @@
 
               </ul>
           </div>
-          <!--notification menu end -->
+
 
       </div>
-      <!-- header section end-->

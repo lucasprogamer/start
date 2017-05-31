@@ -1,76 +1,50 @@
-@extends('layouts.app')
+@extends('layouts.adminex.login')
 
 @section('content')
-<div class="container">
-    <div class="row">
-        <div class="col-md-8 col-md-offset-2">
-            <div class="panel panel-default">
-                <div class="panel-heading">Register</div>
-                <div class="panel-body">
-                    <form class="form-horizontal" role="form" method="POST" action="{{ route('register') }}">
-                        {{ csrf_field() }}
 
-                        <div class="form-group{{ $errors->has('name') ? ' has-error' : '' }}">
-                            <label for="name" class="col-md-4 control-label">Name</label>
+  {!! Form::open(['url' => 'register', 'class'=> 'form-signin']) !!}
+  {!! csrf_field() !!}
 
-                            <div class="col-md-6">
-                                <input id="name" type="text" class="form-control" name="name" value="{{ old('name') }}" required autofocus>
+  <header class="form-signin-heading text-center">
+    <h1 class="sign-title">Registrar</h1>
+    <img src="{{ asset('images/login-logo.png' )}}" alt=""/>
+  </header>
 
-                                @if ($errors->has('name'))
-                                    <span class="help-block">
-                                        <strong>{{ $errors->first('name') }}</strong>
-                                    </span>
-                                @endif
-                            </div>
-                        </div>
+  <div class="login-wrap">
 
-                        <div class="form-group{{ $errors->has('email') ? ' has-error' : '' }}">
-                            <label for="email" class="col-md-4 control-label">E-Mail Address</label>
+    @if (count($errors) > 0)
+      <div class="alert alert-danger">
+        <ul>
+          @foreach ($errors->all() as $error)
+            <li>{{ $error }}</li>
+          @endforeach
+        </ul>
+      </div>
+    @endif
 
-                            <div class="col-md-6">
-                                <input id="email" type="email" class="form-control" name="email" value="{{ old('email') }}" required>
+    {!! Form::text('name',  old('name'),['placeholder' => 'Nome','class' => 'form-control' ,'autofocus' ]) !!}
 
-                                @if ($errors->has('email'))
-                                    <span class="help-block">
-                                        <strong>{{ $errors->first('email') }}</strong>
-                                    </span>
-                                @endif
-                            </div>
-                        </div>
 
-                        <div class="form-group{{ $errors->has('password') ? ' has-error' : '' }}">
-                            <label for="password" class="col-md-4 control-label">Password</label>
+    {!! Form::email('email', old('email'),[ 'placeholder' => 'E-mail', 'class' => 'form-control' ,        'autofocus'
+      ]) !!}
 
-                            <div class="col-md-6">
-                                <input id="password" type="password" class="form-control" name="password" required>
+    {!! Form::password('password', ['placeholder' => 'Senha', 'class' => 'form-control'  ]) !!}
 
-                                @if ($errors->has('password'))
-                                    <span class="help-block">
-                                        <strong>{{ $errors->first('password') }}</strong>
-                                    </span>
-                                @endif
-                            </div>
-                        </div>
+    {!! Form::password('password_confirmation', ['placeholder' => 'Confirmar senha','class' => 'form-control' ]) !!}
 
-                        <div class="form-group">
-                            <label for="password-confirm" class="col-md-4 control-label">Confirm Password</label>
+    {{ Form::button('<i class="fa fa-check"></i>', ['class'=>'btn btn-lg btn-login btn-block','type'=>'submit' ]) }}
 
-                            <div class="col-md-6">
-                                <input id="password-confirm" type="password" class="form-control" name="password_confirmation" required>
-                            </div>
-                        </div>
-
-                        <div class="form-group">
-                            <div class="col-md-6 col-md-offset-4">
-                                <button type="submit" class="btn btn-primary">
-                                    Register
-                                </button>
-                            </div>
-                        </div>
-                    </form>
-                </div>
-            </div>
-        </div>
+    <div class="registration">
+      Possui uma Conta?
+        <a href="{{ route('login') }}" class="">
+            Login
+        </a>
     </div>
-</div>
+
+  </div>
+
+
+
+  {!! Form::close() !!}
+
 @endsection

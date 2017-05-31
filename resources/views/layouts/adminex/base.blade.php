@@ -35,7 +35,7 @@
 
 
         <footer class="sticky-footer">
-            {{date('Y')}} &copy; Consis
+            {{date('Y')}} &copy; Start
         </footer>
         <!--footer section end-->
 

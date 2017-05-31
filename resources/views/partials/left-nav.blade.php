@@ -18,8 +18,8 @@
             <div class="media logged-user">
                 <img alt="" src="images/photos/user-avatar.png" class="media-object">
                 <div class="media-body">
-                    <h4><a href="#">John Doe</a></h4>
-                    <span>"Hello There..."</span>
+                    <h4><a href="#">{{ Auth::user()->name }}</a></h4>
+                    <span>{{ Auth::user()->email }}</span>
                 </div>
             </div>
 
