@@ -12,7 +12,7 @@
 
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
-
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     @section('styles')
     @show
 
@@ -21,13 +21,30 @@
       <section>
 
         @include('partials.left-nav')
-        @include('partials.header')
+
+      <!-- main content start-->
+        <div class="main-content" >
 
 
-          @yield('content')
+          @include('partials.header')
+
+            @yield('content')
 
 
-      </section>
+
+
+
+        <footer class="sticky-footer">
+            {{date('Y')}} &copy; Consis
+        </footer>
+        <!--footer section end-->
+
+
+    </div>
+
+</section>
+
+
 
     <!-- Scripts -->
     <script src="{{ asset('js/app.js') }}"></script>
