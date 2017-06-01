@@ -18,7 +18,8 @@
                       <ul class="dropdown-menu dropdown-menu-usermenu pull-right">
                           <li><a href="#"><i class="fa fa-user"></i>  Profile</a></li>
                           <li><a href="#"><i class="fa fa-cog"></i>  Settings</a></li>
-                          <li><a href="{{ Auth::logout() }}"><i class="fa fa-sign-out"></i> Log Out</a></li>
+                          <li><a href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();"><i class="fa fa-sign-out"></i>Logout</a></li>
+                          <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">{{ csrf_field() }}</form>
                       </ul>
                   </li>
 

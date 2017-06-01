@@ -20,7 +20,7 @@
 <body id="app" class="sticky-header">
       <section>
 
-        @include('partials.left-nav')
+        @include('layouts.sidebar')
 
       <!-- main content start-->
         <div class="main-content" >
