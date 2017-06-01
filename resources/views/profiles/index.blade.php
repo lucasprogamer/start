@@ -2,14 +2,14 @@
 
 
 @section('content')
-    <section class="content-header">
-        <h1 class="pull-left">Profiles</h1>
-        <h1 class="pull-right">
-           <a class="btn btn-primary pull-right" style="margin-top: -10px;margin-bottom: 5px" href="{!! route('profiles.create') !!}">Add New</a>
-        </h1>
+    <section class="page-heading">
+        <h3 class="pull-left">Profiles</h3>
+        <h3 class="pull-right">
+           <a class="btn btn-primary pull-right" style="margin-top: -10px;margin-bottom: 5px" href="{!! route('profiles.create') !!}">Novo</a>
+        </h3>
     </section>
+
     <div class="content">
-      @include('layouts.sidebar')
         <div class="clearfix"></div>
 
         @include('flash::message')
