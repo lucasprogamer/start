@@ -1,6 +1,9 @@
 @extends('layouts.adminex.base')
 
 @section('content')
+@section('styles')
+  <link rel="stylesheet" href="{{ asset('css/bootstrap-fileupload.min.css') }}">
+@endsection
     <section class="content-header">
         <h1>
             $MODEL_NAME_HUMAN$
@@ -21,4 +24,7 @@
             </div>
         </div>
     </div>
+    @section('scripts')
+      <script src="{{ asset('js/bootstrap-fileupload.min.js') }}"></script>
+    @endsection
 @endsection

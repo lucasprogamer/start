@@ -4,5 +4,10 @@
   "/js/js.js": "/js/js.js",
   "/css/adminex.css": "/css/adminex.css",
   "/mix.js": "/mix.js",
-  "/css/style.css": "/css/style.css"
+  "/css/style.css": "/css/style.css",
+  "/resources/assets/js/bootstrap-fileupload.min.js": "/resources/assets/js/bootstrap-fileupload.min.js",
+  "/resources/assets/sass/bootstrap-fileupload.min.scss": "/resources/assets/sass/bootstrap-fileupload.min.scss",
+  "/js/bootstrap-fileupload.min.js": "/js/bootstrap-fileupload.min.js",
+  "/css/bootstrap-fileupload.min.css": "/css/bootstrap-fileupload.min.css",
+  "/css/bootstrap-fileupload.css": "/css/bootstrap-fileupload.css"
 }

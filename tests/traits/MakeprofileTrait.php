@@ -42,7 +42,9 @@ trait MakeprofileTrait
         $fake = Faker::create();
 
         return array_merge([
-            'text' => $fake->word,
+            'last_name' => $fake->word,
+            'thumbnail' => $fake->word,
+            'user_id' => $fake->randomDigitNotNull,
             'created_at' => $fake->word,
             'updated_at' => $fake->word
         ], $profileFields);
