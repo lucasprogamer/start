@@ -3,6 +3,7 @@
 namespace App\Listeners;
 
 use App\Events\UserCreated;
+use App\Models\profile;
 use Illuminate\Queue\InteractsWithQueue;
 use Illuminate\Contracts\Queue\ShouldQueue;
 
@@ -26,6 +27,8 @@ class ProfileCreate
      */
     public function handle(UserCreated $event)
     {
-        //
+        $user = $event->getUser();
+        $profile =  profile::create(['user_id' => $user->id ]);
+        return $profile;
     }
 }

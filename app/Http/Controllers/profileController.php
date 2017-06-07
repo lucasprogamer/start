@@ -88,8 +88,6 @@ class profileController extends AppBaseController
             return redirect(route('profiles.index'));
         }
 
-        dd($profile->user);
-
         return view('profiles.show')->with('profile', $profile);
     }
 
