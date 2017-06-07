@@ -12,7 +12,7 @@
                       <div class="panel">
                           <div class="panel-body">
                               <div class="profile-pic text-center">
-                                  <img alt="" src="https://freeiconshop.com/wp-content/uploads/edd/person-flat.png">
+                                  <img alt="" src="{{ asset('images/user-flat.png') }}">
                               </div>
                           </div>
                       </div>
