@@ -23,11 +23,11 @@
                 </div>
             </div>
 
-            <h5 class="left-nav-title">Account Information</h5>
+            <h5 class="left-nav-title">Configurações</h5>
             <ul class="nav nav-pills nav-stacked custom-nav">
-              <li><a href="#"><i class="fa fa-user"></i> <span>Profile</span></a></li>
-              <li><a href="#"><i class="fa fa-cog"></i> <span>Settings</span></a></li>
-              <li><a href="#"><i class="fa fa-sign-out"></i> <span>Sign Out</span></a></li>
+              <li><a href="{{ route('profiles.show', [Auth::user()->id]) }}"><i class="fa fa-user"></i> <span>Perfil</span></a></li>
+              <li><a href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();"><i class="fa fa-sign-out"></i>Logout</a></li>
+              <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">{{ csrf_field() }}</form>
             </ul>
         </div>
 
