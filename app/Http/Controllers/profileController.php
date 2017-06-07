@@ -8,6 +8,7 @@ use App\Repositories\profileRepository;
 use App\Http\Controllers\AppBaseController;
 use Illuminate\Http\Request;
 use Flash;
+use Auth;
 use Prettus\Repository\Criteria\RequestCriteria;
 use Response;
 
@@ -74,6 +75,11 @@ class profileController extends AppBaseController
      */
     public function show($id)
     {
+      if ($id != Auth::user()->id) {
+        Flash::error('Você não possui autorização para acessar esse perfil');
+        return redirect(route('profiles.index'));
+
+      }
         $profile = $this->profileRepository->findWithoutFail($id);
 
         if (empty($profile)) {
