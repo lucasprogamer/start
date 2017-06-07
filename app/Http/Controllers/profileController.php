@@ -77,7 +77,7 @@ class profileController extends AppBaseController
     {
       if ($id != Auth::user()->id) {
         Flash::error('Você não possui autorização para acessar esse perfil');
-        return redirect(route('profiles.index'));
+        return redirect(route('dashboard'));
 
       }
         $profile = $this->profileRepository->findWithoutFail($id);
@@ -87,6 +87,8 @@ class profileController extends AppBaseController
 
             return redirect(route('profiles.index'));
         }
+
+        dd($profile->user);
 
         return view('profiles.show')->with('profile', $profile);
     }

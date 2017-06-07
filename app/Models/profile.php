@@ -15,7 +15,7 @@ class profile extends Model
     use SoftDeletes;
 
     public $table = 'profiles';
-    
+
 
     protected $dates = ['deleted_at'];
 
@@ -43,8 +43,12 @@ class profile extends Model
      * @var array
      */
     public static $rules = [
-        
+
     ];
 
-    
+    public function user()
+    {
+      return $this->hasOne('App\User');
+    }
+
 }
