@@ -14,8 +14,8 @@
                 <!--breadcrumbs start -->
                 <ul class="breadcrumb panel">
                     <li><a href="{{ route('dashboard') }}"><i class="fa fa-home"></i> Dashboard</a></li>
-                    <li><a href="{{ route('profiles.index') }}">Lista</a></li>
-                    <li class="active">Profile</li>
+                    <li><a href="{{ route('profiles.show',[$profile->id]) }}">Perfil</a></li>
+                    <li class="active">Editar</li>
                 </ul>
                 <!--breadcrumbs end -->
             </div>

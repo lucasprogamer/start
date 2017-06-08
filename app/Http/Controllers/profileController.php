@@ -19,7 +19,7 @@ class profileController extends AppBaseController
 
     public function __construct(profileRepository $profileRepo)
     {
-        $this->middleware('auth');
+        $this->middleware('auth', ['except' => 'shareProfile']);
         $this->profileRepository = $profileRepo;
     }
 
@@ -75,11 +75,6 @@ class profileController extends AppBaseController
      */
     public function show($id)
     {
-      if ($id != Auth::user()->id) {
-        Flash::error('Você não possui autorização para acessar esse perfil');
-        return redirect(route('dashboard'));
-
-      }
         $profile = $this->profileRepository->findWithoutFail($id);
 
         if (empty($profile)) {
@@ -159,4 +154,9 @@ class profileController extends AppBaseController
 
         return redirect(route('profiles.index'));
     }
+
+    function  shareProfile(){
+
+    }
+
 }

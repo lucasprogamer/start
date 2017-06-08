@@ -63,8 +63,7 @@ class RegisterController extends Controller
      */
     protected function create(array $data)
     {
-
-       $user = User::find($data);
+       $user = User::create($data);
        $event = event(new UserCreated($user));
         return $user;
 
