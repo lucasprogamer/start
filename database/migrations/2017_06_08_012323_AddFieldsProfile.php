@@ -14,6 +14,7 @@ class AddFieldsProfile extends Migration
     public function up()
     {
       Schema::table('profiles', function (Blueprint $table) {
+          $table->string('thumbnail_id')->nullable();
           $table->string('gender')->nullable();
           $table->string('education')->nullable();
           $table->string('company')->nullable();
