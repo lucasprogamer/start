@@ -11,7 +11,7 @@
               <ul class="notification-menu">
                   <li>
                       <a href="#" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
-                          <img src="{{ asset('images/user-flat.png') }}" alt="" /> <?php // TODO: add this image ?>
+                          <img src="{{  Auth::user()->getThumbnail() }}" alt="" /> <?php // TODO: add this image ?>
                           {{ Auth::user()->name }}
                           <span class="caret"></span>
                       </a>

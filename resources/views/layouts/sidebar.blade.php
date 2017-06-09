@@ -16,10 +16,10 @@
         <!-- visible to small devices only -->
         <div class="visible-xs hidden-sm hidden-md hidden-lg">
             <div class="media logged-user">
-                <img alt="" src="{{ asset('images/user-flat.png') }}" class="media-object">
+                <img alt="" src="{{ Auth::user()->getThumbnail() }}" class="media-object">
                 <div class="media-body">
-                    <h4><a href="#">{{ Auth::user()->name }}</a></h4>
-                    <span>{{ Auth::user()->email }}</span>
+                    <h4><a href="#"> {{ Auth::user()->name }}</a></h4>
+                    <span> {{ Auth::user()->email }}</span>
                 </div>
             </div>
 

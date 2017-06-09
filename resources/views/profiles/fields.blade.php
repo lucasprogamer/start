@@ -64,7 +64,7 @@
       {!! Form::text('designation', null, ['class' => 'form-control']) !!}
     </div>
     <div class="col-sm-6">
-      {!! Form::label('education', 'Função:') !!}
+      {!! Form::label('education', 'Escolaridade:') !!}
       {!!Form::select('education', [
                                     'Nível fundamental incompleto' => 'Nível fundamental incompleto',
                                     'Nível fundamental' => 'Nível fundamental',
