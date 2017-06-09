@@ -38,23 +38,15 @@
                               <ul class="p-info">
                                   <li>
                                       <div class="title">Sexo</div>
-                                      <div class="desk">Male</div>
+                                      <div class="desk">{{ $profile->gender }}</div>
                                   </li>
                                   <li>
                                       <div class="title">Empresa</div>
-                                      <div class="desk">ABC Inc.</div>
+                                      <div class="desk">{{ $profile->company }}</div>
                                   </li>
                                   <li>
                                       <div class="title">Escolaridade</div>
-                                      <div class="desk">BSC. in CSE</div>
-                                  </li>
-                                  <li>
-                                      <div class="title">Project Done</div>
-                                      <div class="desk">50+</div>
-                                  </li>
-                                  <li>
-                                      <div class="title">Skills</div>
-                                      <div class="desk">HTML, CSS, JavaScript.</div>
+                                      <div class="desk">{{ $profile->education }}</div>
                                   </li>
                               </ul>
                           </div>
@@ -69,24 +61,24 @@
                           <div class="panel-body">
                               <div class="profile-desk">
                                   <h1>{{ $profile->user->name }} {{  $profile->last_name }}</h1>
-                                  <span class="designation">PRODUCT DESIGNER (UX / UI / Visual Interaction)</span>
+                                  <span class="designation">{{ $profile->designation }}</span>
                                   <p>
-                                      I have 10 years of experience designing for the web, and specialize in the areas of user interface design, interaction design, visual design and prototyping. I’ve worked with notable startups including Pearl Street Software.
+                                    {{ $profile->about }}
                                   </p>
                                   <ul class="p-social-link pull-right">
-                                      <li>
-                                          <a href="#">
+                                      <li class="active">
+                                          <a href="{{ $profile->facebook }}">
                                               <i class="fa fa-facebook"></i>
                                           </a>
                                       </li>
                                       <li class="active">
-                                          <a href="#">
+                                          <a href="{{ $profile->twitter }}">
                                               <i class="fa fa-twitter"></i>
                                           </a>
                                       </li>
-                                      <li>
-                                          <a href="#">
-                                              <i class="fa fa-google-plus"></i>
+                                      <li class="active">
+                                          <a href="{{ $profile->github }}">
+                                              <i class="fa fa-github"></i>
                                           </a>
                                       </li>
                                   </ul>
