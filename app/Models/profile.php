@@ -57,7 +57,7 @@ class profile extends Model
     {
       $thumbnail = $this->thumbnail;
       if ($thumbnail == NULL) {
-        $thumbnail = 'http://www.placehold.it/200x150/EFEFEF/AAAAAA&amp;text=no+image';
+        $thumbnail = asset('images/user-flat.png');
       }
       return $thumbnail;
     }
