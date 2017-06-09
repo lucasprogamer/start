@@ -22,7 +22,7 @@
                       <div class="panel">
                           <div class="panel-body">
                               <div class="profile-pic text-center">
-                                  <img alt="" src="{{ asset('images/user-flat.png') }}">
+                                  <img alt="" src="{{  Auth::user()->getThumbnail() }}">
                                   @if ($profile->user->id == Auth::user()->id)
                                     <div class="form-group">
                                       <a class="btn btn-" href="{{ route('profiles.edit', [$profile->id]) }}">Editar Perfil</a>
