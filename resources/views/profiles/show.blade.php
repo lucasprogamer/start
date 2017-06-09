@@ -66,21 +66,27 @@
                                     {{ $profile->about }}
                                   </p>
                                   <ul class="p-social-link pull-right">
+                                    @if (isset($profile->facebook))
                                       <li class="active">
                                           <a href="{{ $profile->facebook }}">
                                               <i class="fa fa-facebook"></i>
                                           </a>
                                       </li>
+                                    @endif
+                                    @if (isset($profile->twitter))
                                       <li class="active">
                                           <a href="{{ $profile->twitter }}">
                                               <i class="fa fa-twitter"></i>
                                           </a>
                                       </li>
+                                    @endif
+                                    @if (isset($profile->twitter))
                                       <li class="active">
                                           <a href="{{ $profile->github }}">
                                               <i class="fa fa-github"></i>
                                           </a>
                                       </li>
+                                    @endif
                                   </ul>
                               </div>
                           </div>

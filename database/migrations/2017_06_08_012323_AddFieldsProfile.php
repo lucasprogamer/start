@@ -34,6 +34,17 @@ class AddFieldsProfile extends Migration
      */
     public function down()
     {
-        //
+      Schema::table('profiles', function (Blueprint $table) {
+          $table->dropColumn('thumbnail_id');
+          $table->dropColumn('gender');
+          $table->dropColumn('education');
+          $table->dropColumn('company');
+          $table->dropColumn('designation');
+          $table->dropColumn('about');
+          $table->dropColumn('facebook');
+          $table->dropColumn('twitter');
+          $table->dropColumn('github');
+
+      });
     }
 }
