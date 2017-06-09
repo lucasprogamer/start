@@ -14,7 +14,7 @@ class AddPhone extends Migration
     public function up()
     {
       Schema::table('profiles', function (Blueprint $table) {
-          $table->string('github')->nullable();
+          $table->string('phone')->nullable();
 
       });
     }
@@ -27,7 +27,7 @@ class AddPhone extends Migration
     public function down()
     {
       Schema::table('profiles', function (Blueprint $table) {
-          $table->dropColumn('github')->nullable();
+          $table->dropColumn('phone')->nullable();
 
       });
     }

@@ -29,7 +29,7 @@
   <div class="row">
     <div class="col-sm-6">
       {!! Form::label('name', 'Nome:') !!}
-      {!! Form::text('name', null, ['class' => 'form-control']) !!}
+      {!! Form::text('name', $profile->user->name, ['class' => 'form-control']) !!}
     </div>
     <div class="col-sm-6">
       {!! Form::label('last_name', 'SobreNome:') !!}
@@ -37,11 +37,11 @@
     </div>
     <div class="col-sm-12">
       {!! Form::label('email', 'Email:') !!}
-      {!! Form::text('email', null, ['class' => 'form-control Disabled', 'Disabled']) !!}
+      {!! Form::text('email', $profile->user->email, ['class' => 'form-control Disabled', 'Disabled']) !!}
     </div>
     <div class="col-sm-6">
       {!! Form::label('phone', 'Telefone:') !!}
-      {!! Form::text('phone', null, ['class' => 'form-control']) !!}
+      {!! Form::text('phone', null, ['class' => 'form-control', 'placeholder' => '(00) 00000-0000']) !!}
     </div>
   </div>
   <br>
@@ -51,9 +51,9 @@
     <div class="col-sm-12">
       {!! Form::label('gender', 'Genêro:') !!} <br>
       {!! Form::radio('gender', null, ['class' => 'form-control']) !!}
-      {!! Form::label('gender', 'Masculino', true) !!}
+      {!! Form::label('gender', 'Feminino', false) !!}
       {!! Form::radio('gender', null, ['class' => 'form-control']) !!}
-      {!! Form::label('gender', 'feminino', false) !!}
+      {!! Form::label('gender', 'Masculino', true) !!}
     </div>
     <div class="col-sm-6">
       {!! Form::label('company', 'Empresa:') !!}
