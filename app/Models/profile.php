@@ -23,6 +23,7 @@ class profile extends Model
     public $fillable = [
         'last_name',
         'thumbnail',
+        'thumbnail_id',
         'user_id'
     ];
 
@@ -34,6 +35,7 @@ class profile extends Model
     protected $casts = [
         'last_name' => 'string',
         'thumbnail' => 'string',
+        'thumbnail_id' => 'string',
         'user_id' => 'integer'
     ];
 
@@ -49,6 +51,15 @@ class profile extends Model
     public function user()
     {
         return $this->belongsTo('App\User');
+    }
+
+    public function getThumbnail()
+    {
+      $thumbnail = $this->thumbnail;
+      if ($thumbnail == NULL) {
+        $thumbnail = 'http://www.placehold.it/200x150/EFEFEF/AAAAAA&amp;text=no+image';
+      }
+      return $thumbnail;
     }
 
 }

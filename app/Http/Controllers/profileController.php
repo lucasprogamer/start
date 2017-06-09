@@ -8,6 +8,7 @@ use App\Repositories\profileRepository;
 use App\Http\Controllers\AppBaseController;
 use Illuminate\Http\Request;
 use Flash;
+use Cloudder;
 use Auth;
 use Prettus\Repository\Criteria\RequestCriteria;
 use Response;
@@ -117,14 +118,22 @@ class profileController extends AppBaseController
     public function update($id, UpdateprofileRequest $request)
     {
         $profile = $this->profileRepository->findWithoutFail($id);
-
+        $data = $request->all();
         if (empty($profile)) {
             Flash::error('Profile not found');
 
             return redirect(route('profiles.index'));
         }
 
-        $profile = $this->profileRepository->update($request->all(), $id);
+        $upload = $this->uploadFile($request->file('thumbnail'));
+        if ($profile->thumbnail_id != null) {
+          Cloudder::delete($profile->thumbnail_id);
+        }
+
+        $data['thumbnail'] = $upload['url'];
+        $data['thumbnail_id'] = $upload['public_id'];
+
+        $profile = $this->profileRepository->update($data, $id);
 
         Flash::success('Profile updated successfully.');
 
@@ -158,5 +167,6 @@ class profileController extends AppBaseController
     function  shareProfile(){
 
     }
+
 
 }

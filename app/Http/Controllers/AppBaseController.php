@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use InfyOm\Generator\Utils\ResponseUtil;
 use Response;
+use Cloudder;
+
 
 /**
  * @SWG\Swagger(
@@ -27,5 +29,14 @@ class AppBaseController extends Controller
     {
         return Response::json(ResponseUtil::makeError($error), $code);
     }
+
+    public function uploadFile($file)
+  {
+      Cloudder::upload($file);
+      $result = Cloudder::getResult();
+      return $result;
+  }
+
+
 
 }

@@ -1,5 +1,5 @@
 @extends('layouts.adminex.base')
-
+@section('title', 'Editar Perfil')
 @section('content')
   @section('styles')
     <link rel="stylesheet" href="{{ asset('css/bootstrap-fileupload.min.css') }}">
@@ -33,7 +33,7 @@
        <div class="box box-primary">
            <div class="box-body">
                <div class="row">
-                   {!! Form::model($profile, ['route' => ['profiles.update', $profile->id], 'method' => 'patch']) !!}
+                   {!! Form::model($profile, ['route' => ['profiles.update', $profile->id], 'method' => 'patch', 'files' => 'true']) !!}
 
                         @include('profiles.fields')
 
