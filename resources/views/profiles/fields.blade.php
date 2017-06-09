@@ -41,7 +41,7 @@
     </div>
     <div class="col-sm-6">
       {!! Form::label('phone', 'Telefone:') !!}
-      {!! Form::text('phone', null, ['class' => 'form-control', 'placeholder' => '(00) 00000-0000']) !!}
+      {!! Form::text('phone', null, ['class' => 'form-control phone', 'placeholder' => '(00) 00000-0000']) !!}
     </div>
   </div>
   <br>
