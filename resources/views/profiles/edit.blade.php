@@ -24,7 +24,7 @@
 
 <section class="panel">
   <header class="panel-heading">
-    Profile
+    Perfil
   </header>
   <div class="panel-body">
     <div>
