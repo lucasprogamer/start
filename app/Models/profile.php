@@ -21,10 +21,20 @@ class profile extends Model
 
 
     public $fillable = [
+        'name',
         'last_name',
         'thumbnail',
         'thumbnail_id',
-        'user_id'
+        'phone',
+        'gender',
+        'education',
+        'company',
+        'designation',
+        'about',
+        'facebook',
+        'twitter',
+        'github',
+        'user_id',
     ];
 
     /**
@@ -33,9 +43,19 @@ class profile extends Model
      * @var array
      */
     protected $casts = [
+        'name' => 'string',
         'last_name' => 'string',
         'thumbnail' => 'string',
         'thumbnail_id' => 'string',
+        'phone' => 'string',
+        'gender' => 'string',
+        'education' => 'string',
+        'company' => 'string',
+        'designation' => 'string',
+        'about' => 'string',
+        'facebook' => 'string',
+        'twitter' => 'string',
+        'github' => 'string',
         'user_id' => 'integer'
     ];
 

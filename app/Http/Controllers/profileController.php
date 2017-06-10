@@ -125,13 +125,16 @@ class profileController extends AppBaseController
             return redirect(route('profiles.index'));
         }
 
-        $upload = $this->uploadFile($request->file('thumbnail'));
-        if ($profile->thumbnail_id != null) {
-          Cloudder::delete($profile->thumbnail_id);
+        if (!is_string($profile->thumbnail)) {
+          $upload = $this->uploadFile($request->file('thumbnail'));
+          if ($profile->thumbnail_id != null) {
+            Cloudder::delete($profile->thumbnail_id);
+          }
+
+          $data['thumbnail'] = $upload['url'];
+          $data['thumbnail_id'] = $upload['public_id'];
         }
 
-        $data['thumbnail'] = $upload['url'];
-        $data['thumbnail_id'] = $upload['public_id'];
 
         $profile = $this->profileRepository->update($data, $id);
 

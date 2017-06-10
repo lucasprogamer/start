@@ -29,13 +29,17 @@
   <div class="row">
     <div class="col-sm-6">
       {!! Form::label('name', 'Nome:') !!}
-      {!! Form::text('name', $profile->user->name, ['class' => 'form-control']) !!}
+      {!! Form::text('name', $profile->name, ['class' => 'form-control']) !!}
     </div>
     <div class="col-sm-6">
       {!! Form::label('last_name', 'SobreNome:') !!}
       {!! Form::text('last_name', null, ['class' => 'form-control']) !!}
     </div>
-    <div class="col-sm-12">
+    <div class="col-sm-6">
+      {!! Form::label('usuario', 'Usuário:') !!}
+      {!! Form::text('usuario', $profile->user->name, ['class' => 'form-control Disabled', 'Disabled']) !!}
+    </div>
+    <div class="col-sm-6">
       {!! Form::label('email', 'Email:') !!}
       {!! Form::text('email', $profile->user->email, ['class' => 'form-control Disabled', 'Disabled']) !!}
     </div>
@@ -75,7 +79,31 @@
                                   ], null, ['class'=>'form-control','placeholder' => 'Escolha ....']) !!}
     </div>
   </div>
+  <h3>Redes Sociais</h3>
+  <div class="row">
+
+    <div class="col-sm-4">
+      <div class="iconic-input">
+          <i class="fa fa-facebook"></i>
+          <input type="text" class="form-control" name="facebook" placeholder="facebook">
+      </div>
+    </div>
+    <div class="col-sm-4">
+      <div class="iconic-input">
+          <i class="fa fa-github"></i>
+          <input type="text" class="form-control" name="github" placeholder="github">
+      </div>
+    </div>
+    <div class="col-sm-4">
+      <div class="iconic-input">
+          <i class="fa fa-twitter"></i>
+          <input type="text" class="form-control" name="twitter" placeholder="twitter">
+      </div>
+    </div>
 </div>
+  </div>
+</div>
+
 
 <div class="clearfix"></div>
 

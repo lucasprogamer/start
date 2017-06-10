@@ -60,7 +60,8 @@
                       <div class="panel">
                           <div class="panel-body">
                               <div class="profile-desk">
-                                  <h1>{{ $profile->user->name }} {{  $profile->last_name }}</h1>
+                                  <h1>{{ $profile->name }} {{  $profile->last_name }}</h1>
+                                  <h5><a style="pointer-events: none;cursor: default;"> @ {{ $profile->user->name }}</a></h5>
                                   <span class="designation">{{ $profile->designation }}</span>
                                   <p>
                                     {{ $profile->about }}

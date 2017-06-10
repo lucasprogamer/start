@@ -22,7 +22,9 @@
       </div>
     @endif
 
-    {!! Form::text('name',  old('name'),['placeholder' => 'Nome','class' => 'form-control' ,'autofocus' ]) !!}
+    {!! Form::text('name',  old('name'),['placeholder' => 'Usuario','class' => 'form-control' ,'autofocus' ]) !!}
+
+    {!! Form::text('nome',  old('name'),['placeholder' => 'Nome','class' => 'form-control' ,'autofocus' ]) !!}
 
 
     {!! Form::email('email', old('email'),[ 'placeholder' => 'E-mail', 'class' => 'form-control' ,        'autofocus'

@@ -16,7 +16,7 @@
                           <span class="caret"></span>
                       </a>
                       <ul class="dropdown-menu dropdown-menu-usermenu pull-right">
-                          <li><a href="{{ route('profiles.show', [Auth::user()->id]) }}"><i class="fa fa-user"></i>  Perfil</a></li>
+                          <li><a href="{{ route('profiles.show', [Auth::user()->profile->id]) }}"><i class="fa fa-user"></i>  Perfil</a></li>
                           <li><a href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();"><i class="fa fa-sign-out"></i>Logout</a></li>
                           <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">{{ csrf_field() }}</form>
                       </ul>
