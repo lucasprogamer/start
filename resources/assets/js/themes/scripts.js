@@ -173,14 +173,6 @@
     $('.phone').mask('(00) 00000-0000');
 
 
-    //froala-editor
-    $(function() {
-       $('.froala-editor').froalaEditor({
-         heightMin: 200,
-         language: 'pt_br'
-       })
-     });
-
 
 
 
