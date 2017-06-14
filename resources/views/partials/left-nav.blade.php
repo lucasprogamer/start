@@ -18,7 +18,7 @@
             <div class="media logged-user">
                 <img alt="" src="{{ asset('images/user-flat.png') }}" class="media-object">
                 <div class="media-body">
-                    <h4><a href="#">{{ Auth::user()->name }}</a></h4>
+                    <h4><a href="#">{{ Auth::user()->username }}</a></h4>
                     <span>{{ Auth::user()->email }}</span>
                 </div>
             </div>

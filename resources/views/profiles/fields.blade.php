@@ -37,7 +37,7 @@
     </div>
     <div class="col-sm-6">
       {!! Form::label('usuario', 'Usuário:') !!}
-      {!! Form::text('usuario', $profile->user->name, ['class' => 'form-control Disabled', 'Disabled']) !!}
+      {!! Form::text('usuario', $profile->user->username, ['class' => 'form-control Disabled', 'Disabled']) !!}
     </div>
     <div class="col-sm-6">
       {!! Form::label('email', 'Email:') !!}
