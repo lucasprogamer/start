@@ -11,6 +11,8 @@ window.$ = window.jQuery = $;
 require ('jquery-ui/ui/widgets/sortable.js');
 require('jquery.nicescroll');
 require('jquery-mask-plugin');
+require('froala-editor');
+require('froala-editor/js/languages/pt_br.js');
 
 
 /**

@@ -85,28 +85,36 @@
     <div class="col-sm-4">
       <div class="iconic-input">
           <i class="fa fa-facebook"></i>
-          <input type="text" class="form-control" name="facebook" placeholder="facebook">
+          {!! Form::text('facebook', null, ['class' => 'form-control', 'placeholder' => 'facebook']) !!}
+
       </div>
     </div>
     <div class="col-sm-4">
       <div class="iconic-input">
           <i class="fa fa-github"></i>
-          <input type="text" class="form-control" name="github" placeholder="github">
+          {!! Form::text('github', null, ['class' => 'form-control', 'placeholder' => 'github']) !!}
+
       </div>
     </div>
     <div class="col-sm-4">
       <div class="iconic-input">
           <i class="fa fa-twitter"></i>
-          <input type="text" class="form-control" name="twitter" placeholder="twitter">
+            {!! Form::text('twitter', null, ['class' => 'form-control', 'placeholder' => 'twitter']) !!}
       </div>
     </div>
-</div>
+  </div>
+  <h3>Sobre</h3>
+  <div class="row">
+
+    <div class="col-sm-12">
+      {!! Form::textarea('about', null, ['class' => 'form-control froala-editor', 'placeholder' => 'Conte sua historia ...']) !!}
+
+    </div>
   </div>
 </div>
 
-
 <div class="clearfix"></div>
-
+<hr>
 <!-- Submit Field -->
 <div class="form-group col-sm-12">
     {!! Form::submit('Salvar', ['class' => 'btn btn-primary']) !!}
