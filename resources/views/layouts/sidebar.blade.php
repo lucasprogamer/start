@@ -3,11 +3,11 @@
 
     <!--logo and iconic logo start-->
     <div class="logo">
-        <a href="{{ route('dashboard') }}"><img src="{{ asset('images/logo.png') }}" alt=""></a>
+        <a href="{{ route('dashboard') }}"><img src="{{ asset('/admin/images/logo.png') }}" alt=""></a>
     </div>
 
     <div class="logo-icon text-center">
-        <a href="{{ route('dashboard') }}"><img src=" {{ asset('images/logo_icon.png') }}" alt=""></a>
+        <a href="{{ route('dashboard') }}"><img src=" {{ asset('/admin/images/logo_icon.png') }}" alt=""></a>
     </div>
     <!--logo and iconic logo end-->
 

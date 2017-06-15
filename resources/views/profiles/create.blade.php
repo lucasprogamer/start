@@ -1,6 +1,6 @@
 @extends('layouts.adminex.base')
 @section('styles')
-  <link rel="stylesheet" href="{{ asset('css/bootstrap-fileupload.min.css') }}">
+  <link rel="stylesheet" href="{{ asset('/admin/css/bootstrap-fileupload.min.css') }}">
 @endsection
 
 @section('content')
@@ -50,5 +50,5 @@
 
 @endsection
 @section('scripts')
-  <script src="{{ asset('js/bootstrap-fileupload.min.js') }}"></script>
+  <script src="{{ asset('/admin/js/bootstrap-fileupload.min.js') }}"></script>
 @endsection

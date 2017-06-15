@@ -3,11 +3,11 @@
 
     <!--logo and iconic logo start-->
     <div class="logo">
-        <a href="index.html"><img src="{{ asset('images/logo.png') }}" alt=""></a>
+        <a href="index.html"><img src="{{ asset('/admin/images/logo.png') }}" alt=""></a>
     </div>
 
     <div class="logo-icon text-center">
-        <a href="index.html"><img src="{{ asset('images/logo.png') }}" alt=""></a>
+        <a href="index.html"><img src="{{ asset('/admin/images/logo.png') }}" alt=""></a>
     </div>
     <!--logo and iconic logo end-->
 
@@ -16,7 +16,7 @@
         <!-- visible to small devices only -->
         <div class="visible-xs hidden-sm hidden-md hidden-lg">
             <div class="media logged-user">
-                <img alt="" src="{{ asset('images/user-flat.png') }}" class="media-object">
+                <img alt="" src="{{ asset('/admin/images/user-flat.png') }}" class="media-object">
                 <div class="media-body">
                     <h4><a href="#">{{ Auth::user()->username }}</a></h4>
                     <span>{{ Auth::user()->email }}</span>

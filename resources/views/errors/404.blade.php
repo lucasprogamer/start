@@ -11,7 +11,7 @@
     <title>{{ config('app.name', 'Laravel') }} - @yield('404 Pagina Não encontrada')</title>
 
     <!-- Styles -->
-    <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+    <link href="{{ asset('/admin/css/app.css') }}" rel="stylesheet">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 
 
@@ -31,6 +31,6 @@
     </div>
 </section>
     <!-- Scripts -->
-    <script src="{{ asset('js/app.js') }}"></script>
+    <script src="{{ asset('/admin/js/app.js') }}"></script>
 </body>
 </html>

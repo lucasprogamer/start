@@ -16,11 +16,11 @@ var LiveReloadPlugin = require('webpack-livereload-plugin');
 mix.js([
         'resources/assets/js/app.js',
         'resources/assets/js/themes/scripts.js',
-        ], 'public/js')
-   .js('resources/assets/js/themes/bootstrap-fileupload.min.js', 'public/js')
-   .sass('resources/assets/sass/app.scss', 'public/css')
-   .sass('resources/assets/sass/bootstrap-fileupload.min.scss', 'public/css')
-   .copyDirectory('resources/assets/images', 'public/images');
+      ], 'public/admin/js')
+   .js('resources/assets/js/themes/bootstrap-fileupload.min.js', 'public/admin/js')
+   .sass('resources/assets/sass/app.scss', 'public/admin/css')
+   .sass('resources/assets/sass/bootstrap-fileupload.min.scss', 'public/admin/css')
+   .copyDirectory('resources/assets/images', 'public/admin/images');
 
 
 mix.browserSync('start.app');

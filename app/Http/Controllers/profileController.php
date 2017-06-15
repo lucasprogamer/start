@@ -124,8 +124,7 @@ class profileController extends AppBaseController
 
             return redirect(route('profiles.index'));
         }
-
-        if (!is_string($profile->thumbnail)) {
+        if ($request->file('thumbnail') != null) {
           $upload = $this->uploadFile($request->file('thumbnail'));
           if ($profile->thumbnail_id != null) {
             Cloudder::delete($profile->thumbnail_id);
@@ -140,7 +139,7 @@ class profileController extends AppBaseController
 
         Flash::success('Profile updated successfully.');
 
-        return redirect(route('profiles.index'));
+        return redirect(route('profiles.show', [$profile->id]));
     }
 
     /**

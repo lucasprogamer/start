@@ -7,7 +7,7 @@
 
   <header class="form-signin-heading text-center">
     <h1 class="sign-title">Registrar</h1>
-    <img src="{{ asset('images/login-logo.png' )}}" alt=""/>
+    <img src="{{ asset('/admin/images/login-logo.png' )}}" alt=""/>
   </header>
 
   <div class="login-wrap">

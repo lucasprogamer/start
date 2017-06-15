@@ -77,7 +77,7 @@ class profile extends Model
     {
       $thumbnail = $this->thumbnail;
       if ($thumbnail == NULL) {
-        $thumbnail = asset('images/user-flat.png');
+        $thumbnail = asset('/admin/images/user-flat.png');
       }
       return $thumbnail;
     }

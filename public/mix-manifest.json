@@ -9,5 +9,9 @@
   "/resources/assets/sass/bootstrap-fileupload.min.scss": "/resources/assets/sass/bootstrap-fileupload.min.scss",
   "/js/bootstrap-fileupload.min.js": "/js/bootstrap-fileupload.min.js",
   "/css/bootstrap-fileupload.min.css": "/css/bootstrap-fileupload.min.css",
-  "/css/bootstrap-fileupload.css": "/css/bootstrap-fileupload.css"
+  "/css/bootstrap-fileupload.css": "/css/bootstrap-fileupload.css",
+  "/admin/js/app.js": "/admin/js/app.js",
+  "/admin/css/app.css": "/admin/css/app.css",
+  "/admin/css/bootstrap-fileupload.min.css": "/admin/css/bootstrap-fileupload.min.css",
+  "/admin/js/bootstrap-fileupload.min.js": "/admin/js/bootstrap-fileupload.min.js"
 }

@@ -2,7 +2,7 @@
 @section('title', 'Editar Perfil')
 @section('content')
   @section('styles')
-    <link rel="stylesheet" href="{{ asset('css/bootstrap-fileupload.min.css') }}">
+    <link rel="stylesheet" href="{{ asset('/admin/css/bootstrap-fileupload.min.css') }}">
   @endsection
   <div class="wrapper">
 
@@ -47,7 +47,7 @@
 </section>
 
 @section('scripts')
-<script src="{{ asset('js/bootstrap-fileupload.min.js') }}"></script>
+<script src="{{ asset('/admin/js/bootstrap-fileupload.min.js') }}"></script>
 @endsection
 
 @endsection
