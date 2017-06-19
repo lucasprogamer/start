@@ -107,7 +107,7 @@
   <div class="row">
 
     <div class="col-sm-12">
-      {!! Form::textarea('about', null, ['class' => 'form-control froala-editor', 'placeholder' => 'Conte sua historia ...']) !!}
+      {!! Form::textarea('about', null, ['class' => 'form-control ckeditor', 'placeholder' => 'Conte sua historia ...']) !!}
 
     </div>
   </div>
