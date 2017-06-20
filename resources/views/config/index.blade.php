@@ -1,9 +1,6 @@
 @extends('layouts.adminex.base')
-@section('title', 'Editar Perfil')
+@section('title', 'Configurações')
 @section('content')
-  @section('styles')
-    <link rel="stylesheet" href="{{ asset('/admin/css/bootstrap-fileupload.min.css') }}">
-  @endsection
   <div class="wrapper">
 
       <section class="content-header">
@@ -14,8 +11,7 @@
                   <!--breadcrumbs start -->
                   <ul class="breadcrumb panel">
                       <li><a href="{{ route('dashboard') }}"><i class="fa fa-home"></i> Dashboard</a></li>
-                      <li><a href="{{ route('profiles.show',[$profile->id]) }}">Perfil</a></li>
-                      <li class="active">Editar</li>
+                      <li class="active">Configurções</li>
                   </ul>
                   <!--breadcrumbs end -->
               </div>
@@ -24,7 +20,7 @@
 
   <section class="panel">
     <header class="panel-heading">
-      Perfil
+      Geral
     </header>
       <div class="panel-body">
        <div class="content">
@@ -32,9 +28,9 @@
            <div class="box box-primary">
                <div class="box-body">
                    <div class="row">
-                       {!! Form::model($profile, ['route' => ['profiles.update', $profile->id], 'method' => 'patch', 'files' => 'true']) !!}
+                       {!! Form::model($config, ['route' => ['config.store'], 'method' => 'patch', 'files' => 'true']) !!}
 
-                            @include('profiles.fields')
+                            @include('config.general')
 
                        {!! Form::close() !!}
                    </div>
@@ -45,8 +41,6 @@
   </section>
 </div>
 
-@section('scripts')
-<script src="{{ asset('/admin/js/bootstrap-fileupload.min.js') }}"></script>
-@endsection
+
 
 @endsection
