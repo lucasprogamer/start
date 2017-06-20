@@ -4,7 +4,7 @@
  --}}
 
  <li class="{{ Request::is('media*') ? 'active' : '' }}">
-     <a href="{!! route('media.index') !!}"><i class="ion ion-images"></i><span>Media</span></a>
+     <a href="{!! route('media.index') !!}"><i class="ion ion-images"></i><span> Media</span></a>
  </li>
  <li class="menu-list"><a href=""><i class="fa fa-cog"></i> <span>Configurações</span></a>
      <ul class="sub-menu-list">

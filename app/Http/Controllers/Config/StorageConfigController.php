@@ -5,7 +5,7 @@ namespace App\Http\Controllers\Config;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 
-class StorageConfigController extends Controller
+class StorageConfigController extends AppBaseController
 {
     /**
      * Display a listing of the resource.

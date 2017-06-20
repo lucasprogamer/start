@@ -11,8 +11,9 @@
     <title>{{ config('app.name', 'Laravel') }} - @yield('title')</title>
 
     <!-- Styles -->
-    <link href="{{ asset('/admin/css/app.css') }}" rel="stylesheet">
+    <link rel="stylesheet" href="http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="{{ asset('/admin/css/app.css') }}" rel="stylesheet">
     @section('styles')
     @show
 
