@@ -1,5 +1,8 @@
 @extends('layouts.adminex.base')
 @section('title', 'Configurações')
+@section('styles')
+  <link rel="stylesheet" href="{{ asset('/admin/css/bootstrap-fileupload.min.css') }}">
+@endsection
 @section('content')
   <div class="wrapper">
 
@@ -30,8 +33,9 @@
                <div class="box-body">
                    <div class="row">
                        {!! Form::model($general, ['route' => ['general.store'], 'method' => 'patch', 'files' => 'true']) !!}
-
+                          <div class="wrapper">
                             @include('config.partials.general_fields')
+                          </div>
 
                        {!! Form::close() !!}
                    </div>
@@ -43,5 +47,7 @@
 </div>
 
 
-
+@endsection
+@section('scripts')
+<script src="{{ asset('/admin/js/bootstrap-fileupload.min.js') }}"></script>
 @endsection

@@ -30,8 +30,9 @@
                <div class="box-body">
                    <div class="row">
                        {!! Form::model($general, ['route' => ['general.store'], 'method' => 'patch', 'files' => 'true']) !!}
-
+                        <div class="form-group">
                             @include('config.partials.general_fields')
+                        </div>
 
                        {!! Form::close() !!}
                    </div>
