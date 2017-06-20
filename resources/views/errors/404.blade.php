@@ -22,7 +22,7 @@
     <div class="container ">
 
         <section class="error-wrapper text-center">
-            <h1><img alt="" src="images/404-error.png"></h1>
+            <h1><img alt="" src="{{ asset('images/404-error.png') }}"></h1>
             <h2>Pagina Não Encontrada</h2>
             <h3>Algo de errado não esta certo</h3>
             <a class="back-btn" href="{{ route('dashboard') }}"> Volte ao incio</a>

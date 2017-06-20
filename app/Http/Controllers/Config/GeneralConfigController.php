@@ -14,7 +14,7 @@ class GeneralConfigController extends Controller
      */
     public function index()
     {
-        //
+      return 'deu carai';
     }
 
     /**

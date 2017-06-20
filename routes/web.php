@@ -21,5 +21,11 @@ Route::group(['prefix' => 'dashboard'], function ()
 {
   Route::get('/', 'HomeController@index')->name('dashboard');
   Route::resource('perfil', 'profileController', ['names'=> 'profiles']);
-  Route::resource('config', 'configController', ['only' => ['index', 'store']]);
+});
+
+Route::group(['prefix' => 'config', 'middleware' => 'auth', 'namespace' => 'Config'], function ()
+{
+  Route::resource('geral', 'GeneralConfigController', ['names'=> 'general']);
+  Route::resource('arquivos', 'StorageConfigController', ['names'=> 'storage']);
+  Route::resource('mail', 'MailConfigController', ['names'=> 'mail']);
 });
