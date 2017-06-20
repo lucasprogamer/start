@@ -29,3 +29,6 @@ Route::group(['prefix' => 'config', 'middleware' => 'auth', 'namespace' => 'Conf
   Route::resource('arquivos', 'StorageConfigController', ['names'=> 'storage']);
   Route::resource('mail', 'MailConfigController', ['names'=> 'mail']);
 });
+
+
+Route::resource('media', 'MediaController');

@@ -2,6 +2,10 @@
     <a href="{!! route('profiles.index') !!}"><i class="fa fa-edit"></i><span>profiles</span></a>
 </li>
  --}}
+
+ <li class="{{ Request::is('media*') ? 'active' : '' }}">
+     <a href="{!! route('media.index') !!}"><i class="ion ion-images"></i><span>Media</span></a>
+ </li>
  <li class="menu-list"><a href=""><i class="fa fa-cog"></i> <span>Configurações</span></a>
      <ul class="sub-menu-list">
          <li><a href="{{ route('general.index') }}"><i class="fa fa-desktop"></i> Geral </a></li>
