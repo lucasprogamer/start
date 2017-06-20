@@ -11,7 +11,7 @@
                   <!--breadcrumbs start -->
                   <ul class="breadcrumb panel">
                       <li><a href="{{ route('dashboard') }}"><i class="fa fa-home"></i> Dashboard</a></li>
-                      <li><a href="#">Configurações</a></li>
+                      <li>Configurações</li>
                       <li class="active">Armazenamento</li>
                   </ul>
                   <!--breadcrumbs end -->
