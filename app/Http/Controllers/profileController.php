@@ -137,7 +137,7 @@ class profileController extends AppBaseController
 
         $profile = $this->profileRepository->update($data, $id);
 
-        Flash::success('Profile updated successfully.');
+        Flash::success('Perfil Atualizado.');
 
         return redirect(route('profiles.show', [$profile->id]));
     }
