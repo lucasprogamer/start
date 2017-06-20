@@ -18,7 +18,7 @@ class CreateMediaTable extends Migration
             $table->text('name');
             $table->text('url');
             $table->text('thumbnail');
-            $table->text('thumbnail_id');
+            $table->text('public_id');
             $table->timestamps();
             $table->softDeletes();
         });

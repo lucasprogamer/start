@@ -130,8 +130,8 @@ class profileController extends AppBaseController
             Cloudder::delete($profile->thumbnail_id);
           }
 
-          $data['thumbnail'] = $upload['url'];
-          $data['thumbnail_id'] = $upload['public_id'];
+          $data['url'] = $upload['url'];
+          $data['public_id'] = $upload['public_id'];
         }
 
 

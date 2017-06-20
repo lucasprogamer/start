@@ -15,7 +15,7 @@ class Media extends Model
     use SoftDeletes;
 
     public $table = 'media';
-    
+
 
     protected $dates = ['deleted_at'];
 
@@ -24,7 +24,7 @@ class Media extends Model
         'name',
         'url',
         'thumbnail',
-        'thumbnail_id'
+        'public_id'
     ];
 
     /**
@@ -36,7 +36,7 @@ class Media extends Model
         'name' => 'string',
         'url' => 'string',
         'thumbnail' => 'string',
-        'thumbnail_id' => 'string'
+        'public_id' => 'string'
     ];
 
     /**
@@ -45,8 +45,8 @@ class Media extends Model
      * @var array
      */
     public static $rules = [
-        
+
     ];
 
-    
+
 }

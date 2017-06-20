@@ -23,7 +23,6 @@ class profile extends Model
     public $fillable = [
         'name',
         'last_name',
-        'thumbnail',
         'thumbnail_id',
         'phone',
         'gender',
@@ -45,7 +44,6 @@ class profile extends Model
     protected $casts = [
         'name' => 'string',
         'last_name' => 'string',
-        'thumbnail' => 'string',
         'thumbnail_id' => 'string',
         'phone' => 'string',
         'gender' => 'string',
