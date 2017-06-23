@@ -29,7 +29,11 @@ class Upload
     public function handle(Uploadfile $event)
     {
       $file = $event->getFile();
-      $profile =  profile::create(['user_id' => $user->id, 'name' => $user->name ]);
-      return $profile;
+
+      Cloudder::upload($file);
+      $result = Cloudder::getResult();
+
+      $media = Media::create($result);
+      return $media;
     }
 }

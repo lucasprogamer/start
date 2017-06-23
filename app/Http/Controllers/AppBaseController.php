@@ -32,9 +32,7 @@ class AppBaseController extends Controller
 
     public function uploadFile($file)
   {
-      Cloudder::upload($file);
-      $result = Cloudder::getResult();
-      return $result;
+
   }
 
 
